@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <meta charset="UTF-8">
+        <title>Search for image</title>
+        <link href="/styles/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container"> 
+            <form action="/" method="GET">
+                <input type="text" name="searchbar" placeholder="Search for a image here" class="searchbox" required>
+                <button type="submit" class="searchbutton">Search</button>
+            </form>
+            <%if (locals.data) { %>
+                <img src= <%=data %>  width="400" height="400" class="imgcontainer"/>
+            <% }else if (locals.error){ %>
+                <p> Sorry an error occured :- <%= error%>Pls try again</p>
+            <% }else{ %>
+                <p> Search for an image above</p>
+            <%}%>
+              
+        </div>
+
+        <footer> ©2024-Revanth Kanna - Made for codechef VITC - All Rights Reserved </footer>
+    </body>
+
+
+</htm>
